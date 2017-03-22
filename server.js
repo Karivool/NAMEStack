@@ -1,9 +1,7 @@
 let express = require('express');
 let app = express();
 
-app.get('/', function (req, res) {
-  res.send("Server now running")
-});
+app.use(express.static(__dirname + "/public"));
 
 let port = 3000;
 
