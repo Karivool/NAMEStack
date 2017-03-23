@@ -1,17 +1,32 @@
 <!DOCTYPE>
 <html ng-app>
 <head>
-  <link rel="stylesheet" type="text/css" href="stylesheets/00-reset.css" media="screen" />
-  <link rel="stylesheet" type="text/css" href="stylesheets/01-namestack.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="/stylesheets/00-reset.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="/stylesheets/01-namestack.css" media="screen" />
   <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
 
   <title>NAMEStack</title>
   <body>
-    <h1>NAMEStack App</h1>
+    <div class="main" ng-controller="AppController">
+      <h1>NAMEStack App</h1>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>HP</th>
+            <th>ATK</th>
+            <th>SPD</th>
+            <th>DEF</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
   </body>
 
   <input ng-model="nameStack">
   {{nameStack}}
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular.min.js"></script>
+  <script src="controllers/controller.js"></script>
 </head>
 </html>
