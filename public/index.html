@@ -16,10 +16,17 @@
             <th>Name</th>
             <th>HP</th>
             <th>ATK</th>
-            <th>SPD</th>
-            <th>DEF</th>
+            <th>RCV</th>
           </tr>
         </thead>
+        <tbody>
+          <tr ng-repeat="card in cards">
+            <td>{{card.name}}</td>
+            <td>{{card.hp}}</td>
+            <td>{{card.atk}}</td>
+            <td>{{card.rcv}}</td>
+          </tr>
+        </tbody>
       </table>
     </div>
   </body>
