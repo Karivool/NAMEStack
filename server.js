@@ -1,34 +1,18 @@
 let express = require('express');
+let mongojs = require('mongojs');
 let app = express();
+let db = mongojs('namestack', ['namestack']);
 
 app.use(express.static(__dirname + "/public"));
 
 app.get('/cardinfo', function (req, res) {
   console.log("GET request made.");
 
-  chr1 = {
-    name: "Pizzer",
-    hp: 2900,
-    atk: 1650,
-    rcv: 444
-  };
+  db.namestack.find(function (err, docs) {
+    console.log(docs);
 
-  chr2 = {
-    name: "Brooker",
-    hp: 2800,
-    atk: 1400,
-    rcv: 751
-  };
-
-  chr3 = {
-    name: "Lifter",
-    hp: 2200,
-    atk: 2100,
-    rcv: -100,
-  };
-
-  let cardinfo = [chr1, chr2, chr3];
-  res.json(cardinfo);
+    res.json(docs);
+  });
 });
 
 let port = 3000;
