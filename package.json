@@ -1,11 +1,13 @@
 {
   "name": "namestack",
   "version": "1.0.0",
-  "description": "",
+  "description": "MEAN stack exploration app",
   "main": "namestack.js",
   "dependencies": {
-    "webpack": "^1.14.0",
-    "express": "^4.15.2"
+    "express": "^4.15.2",
+    "mongojs": "^2.4.0",
+    "node.js": "0.0.0",
+    "webpack": "^1.14.0"
   },
   "devDependencies": {},
   "scripts": {
@@ -16,8 +18,8 @@
     "url": "git+https://github.com/Karivool/NAMEStack.git"
   },
   "babel": {
-  "presets": [
-    "es2015"
+    "presets": [
+      "es2015"
     ]
   },
   "author": "Pizza Lady",
