@@ -26,4 +26,18 @@ function AppController($scope, $http) {
       refresh();
     });
   };
+
+  $scope.edit = function(id) {
+    console.log(id);
+    $http.get('/cardinfo/' + id).success(function(response) {
+      $scope.card = response;
+    });
+  };
+
+  $scope.update = function() {
+    console.log($scope.card._id);
+    $http.put('/cardinfo/' + $scope.card._id, $scope.card).success(function(response) {
+      refresh();
+    });
+  };
 }

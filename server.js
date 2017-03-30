@@ -32,6 +32,24 @@ app.delete('/cardinfo/:id', function (req, res) {
   })
 });
 
+app.get('/cardinfo/:id', function (req, res) {
+  let id = req.params.id;
+  console.log(id);
+  db.namestack.findOne({_id: mongojs.ObjectId(id)}, function (err, doc) {
+    res.json(doc);
+  });
+});
+
+app.put('/cardinfo/:id', function (req, res) {
+  let id = req.params.id;
+  console.log(req.body.name);
+  db.namestack.findAndModify({query: {_id:mongojs.ObjectId(id)},
+    update: {$set: {name: req.body.name, hp: req.body.hp, atk: req.body.atk, rcv: req.body.rcv}},
+    new: true}, function (err, doc) {
+      res.json(doc);
+  });
+});
+
 let port = 3000;
 
 app.listen(port);
