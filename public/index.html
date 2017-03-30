@@ -7,8 +7,8 @@
 
   <title>NAMEStack</title>
   <body>
+    <h1 class="title">Card Stat Collector</h1>
     <div class="main" ng-controller="AppController">
-      <h1>NAMEStack App</h1>
 
       <table class="table">
         <thead>
@@ -27,11 +27,11 @@
             <td><input class="form" ng-model="card.rcv"></td>
             <td><button class="button" ng-click="addCard()">Add Card</button></td>
           </tr>
-          <tr ng-repeat="card in cardinfo">
-            <td>{{card.name}}</td>
-            <td>{{card.hp}}</td>
-            <td>{{card.atk}}</td>
-            <td>{{card.rcv}}</td>
+          <tr class="stats" ng-repeat="card in cardinfo">
+            <td class="stat-box">{{card.name}}</td>
+            <td class="stat-box">{{card.hp}}</td>
+            <td class="stat-box">{{card.atk}}</td>
+            <td class="stat-box">{{card.rcv}}</td>
           </tr>
         </tbody>
       </table>

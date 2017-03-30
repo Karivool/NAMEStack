@@ -1,6 +1,45 @@
 .main {
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  background: #6110F0;
+  align-items: baseline;
+  background: rgb(132, 134, 218);
+  display: flex;
+  font-family: 'Arvo', sans-serif;
+  height: 100%;
+  justify-content: center;
+
+}
+
+.title {
+  border: 2px solid;
+  color: #25265f;
+  float: none;
+  font-family: fantasy;
+  font-size: 34px;
+  text-align: center;
+  background: #81b1d4;
+}
+
+.button {
+  background: #273167;
+  border: 2px solid;
+  border-color: chartreuse;
+  border-radius: 5px;
+  color: azure;
+  padding: 2px 15px;
+}
+
+.form {
+  background: white;
+  border: 3px solid;
+  border-color: rgb(24, 17, 43);
+  border-radius: 5px;
+  padding-top: 2px;
+}
+
+.stats {
+  background: #d4d9ea;
+}
+
+.stat-box {
+  border-radius: 2px;
+  border: 1px solid;
 }
