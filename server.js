@@ -15,6 +15,10 @@ app.get('/cardinfo', function (req, res) {
   });
 });
 
+app.post('/cardinfo', function (req, res) {
+  console.log(req.body);
+});
+
 let port = 3000;
 
 app.listen(port);
