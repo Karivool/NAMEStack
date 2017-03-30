@@ -2,8 +2,10 @@ let express = require('express');
 let mongojs = require('mongojs');
 let app = express();
 let db = mongojs('namestack', ['namestack']);
+let bodyParser = require('body-parser');
 
 app.use(express.static(__dirname + "/public"));
+app.use(bodyParser.json());
 
 app.get('/cardinfo', function (req, res) {
   console.log("GET request made.");
@@ -17,6 +19,9 @@ app.get('/cardinfo', function (req, res) {
 
 app.post('/cardinfo', function (req, res) {
   console.log(req.body);
+  db.cardinfo.insert(req.body, function(err, doc) {
+    res.json(doc);
+  });
 });
 
 let port = 3000;
