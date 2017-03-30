@@ -27,6 +27,19 @@
   padding: 2px 15px;
 }
 
+.button-del {
+  background: #273167;
+  border: 2px solid;
+  border-color: #56100b;
+  border-radius: 5px;
+  color: azure;
+  padding: 2px 15px;
+}
+
+.button-box {
+  background: rgb(132, 134, 218);
+}
+
 .form {
   background: white;
   border: 3px solid;
