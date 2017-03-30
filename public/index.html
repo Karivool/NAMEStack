@@ -20,6 +20,13 @@
           </tr>
         </thead>
         <tbody>
+          <tr>
+            <td><input class="form" ng-model="card.name"></td>
+            <td><input class="form" ng-model="card.hp"></td>
+            <td><input class="form" ng-model="card.atk"></td>
+            <td><input class="form" ng-model="card.rcv"></td>
+            <td><button class="button" ng-click="addCard()">Add Card</button></td>
+          </tr>
           <tr ng-repeat="card in cardinfo">
             <td>{{card.name}}</td>
             <td>{{card.hp}}</td>
