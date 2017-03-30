@@ -8,6 +8,8 @@ function AppController($scope, $http) {
 
   $scope.addCard = function() {
     console.log($scope.card);
-    $http.post("/cardinfo", $scope.card);
+    $http.post("/cardinfo", $scope.card).success(function(response) {
+      console.log(response);
+    });
   };
 }
