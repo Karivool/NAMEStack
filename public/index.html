@@ -27,7 +27,7 @@
             <td><input class="form" ng-model="card.atk"></td>
             <td><input class="form" ng-model="card.rcv"></td>
             <td><button class="button" ng-click="addCard()">Add Card</button></td>
-            <td><button class="button-info" ng-click="update()">Update</button></td>
+            <td><button class="button-mod" ng-click="update()">Update</button>&nbsp;&nbsp;<button class="button-mod" ng-click="deselect()">Clear</td>
           </tr>
           <tr class="stats" ng-repeat="card in cardinfo">
             <td class="stat-box">{{card.name}}</td>
@@ -35,7 +35,7 @@
             <td class="stat-box">{{card.atk}}</td>
             <td class="stat-box">{{card.rcv}}</td>
             <td class="button-box"><button class="button-del" ng-click="remove(card._id)">Delete</button></td>
-            <td><button class="button-edit" ng-click="edit(card._id)">Edit</button></td>
+            <td class="button-box"><button class="button-edit" ng-click="edit(card._id)">Edit</button></td>
           </tr>
         </tbody>
       </table>

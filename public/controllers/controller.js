@@ -40,4 +40,8 @@ function AppController($scope, $http) {
       refresh();
     });
   };
+
+  $scope.deselect = function() {
+    $scope.card = "";
+  }
 }
