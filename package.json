@@ -2,17 +2,15 @@
   "name": "namestack",
   "version": "1.0.0",
   "description": "MEAN stack exploration app",
-  "main": "namestack.js",
+  "main": "server.js",
   "dependencies": {
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
     "mongojs": "^2.4.0",
-    "node.js": "0.0.0",
     "webpack": "^1.14.0"
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
