@@ -19,7 +19,7 @@ app.get('/cardinfo', function (req, res) {
 
 app.post('/cardinfo', function (req, res) {
   console.log(req.body);
-  db.cardinfo.insert(req.body, function(err, doc) {
+  db.namestack.insert(req.body, function(err, doc) {
     res.json(doc);
   });
 });
