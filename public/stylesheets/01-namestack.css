@@ -1,7 +1,8 @@
 .main {
   align-items: baseline;
   background: rgb(132, 134, 218);
-  display: flex;
+  display: inline-flex;
+  flex: auto;
   font-family: 'Arvo', sans-serif;
   height: 100%;
   justify-content: center;
@@ -58,11 +59,20 @@
   background: rgb(132, 134, 218);
 }
 
+.button:hover, .button-del:hover, .button-mod:hover, .button-edit:hover {
+  background: #3d8548;
+}
+
+.td-form {
+  padding-right: 3px;
+}
+
 .form {
+  width: 100%;
   background: white;
-  border: 3px solid;
+  border: 2px solid;
   border-color: rgb(24, 17, 43);
-  border-radius: 5px;
+  border-radius: 1px;
   padding-top: 2px;
 }
 
@@ -73,4 +83,8 @@
 .stat-box {
   border-radius: 2px;
   border: 1px solid;
+}
+
+.stat-box:hover {
+  background-color: #86aeca;
 }

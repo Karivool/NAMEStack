@@ -22,10 +22,10 @@
         </thead>
         <tbody>
           <tr>
-            <td><input class="form" ng-model="card.name"></td>
-            <td><input class="form" ng-model="card.hp"></td>
-            <td><input class="form" ng-model="card.atk"></td>
-            <td><input class="form" ng-model="card.rcv"></td>
+            <td class="td-form"><input class="form" ng-model="card.name"></td>
+            <td class="td-form"><input class="form" ng-model="card.hp"></td>
+            <td class="td-form"><input class="form" ng-model="card.atk"></td>
+            <td class="td-form"><input class="form" ng-model="card.rcv"></td>
             <td><button class="button" ng-click="addCard()">Add Card</button></td>
             <td><button class="button-mod" ng-click="update()">Update</button>&nbsp;&nbsp;<button class="button-mod" ng-click="deselect()">Clear</td>
           </tr>
@@ -41,9 +41,6 @@
       </table>
     </div>
   </body>
-
-  <input ng-model="nameStack">
-  {{nameStack}}
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular.min.js"></script>
   <script src="controllers/controller.js"></script>
 </head>
