@@ -52,5 +52,5 @@ app.put('/cardinfo/:id', function (req, res) {
 
 let port = 3000;
 
-app.listen((process.env.PORT || port);
+app.listen(process.env.PORT || port);
 console.log("Running on " + port.toString());
