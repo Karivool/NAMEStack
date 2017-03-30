@@ -4,6 +4,7 @@ let app = express();
 let db = mongojs('namestack', ['namestack']);
 let bodyParser = require('body-parser');
 
+mongojs.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/namestack-development');
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.json());
 
