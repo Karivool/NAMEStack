@@ -36,6 +36,24 @@
   padding: 2px 15px;
 }
 
+.button-edit {
+  background: #273167;
+  border: 2px solid;
+  border-color: #2be0c7;
+  border-radius: 5px;
+  color: azure;
+  padding: 2px 15px;
+}
+
+.button-mod {
+  background: #273167;
+  border: 2px solid;
+  border-color: #12ff3a;
+  border-radius: 5px;
+  color: azure;
+  padding: 2px 15px;
+}
+
 .button-box {
   background: rgb(132, 134, 218);
 }
