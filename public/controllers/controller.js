@@ -19,4 +19,11 @@ function AppController($scope, $http) {
       refresh();
     });
   };
+
+  $scope.remove = function(id) {
+    console.log(id);
+    $http.delete('/cardinfo/' + id).success(function(response) {
+      refresh();
+    });
+  };
 }

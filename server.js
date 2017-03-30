@@ -24,6 +24,14 @@ app.post('/cardinfo', function (req, res) {
   });
 });
 
+app.delete('/cardinfo/:id', function (req, res) {
+  let id = req.params.id;
+  console.log(id);
+  db.namestack.remove({_id: mongojs.ObjectId(id)}, function (err, doc) {
+    res.json(doc);
+  })
+});
+
 let port = 3000;
 
 app.listen(port);
