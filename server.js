@@ -5,11 +5,6 @@ let db = mongojs('namestack', ['namestack']);
 let bodyParser = require('body-parser');
 
 let mongodb = require('mongodb');
-let uri = 'mongodb://user:pass@host:port/db';
-mongodb.MongoClient.connect(uri, { server: { auto_reconnect: true } }, function (err, db) {
-
-});
-
 
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.json());
@@ -57,7 +52,7 @@ app.put('/cardinfo/:id', function (req, res) {
   });
 });
 
-let port = 3000;
+let port = process.env.PORT || 3000;
 
-app.listen(process.env.PORT || port);
+app.listen(port);
 console.log("Running on " + port.toString());
