@@ -1,7 +1,7 @@
 .main {
   align-items: baseline;
   background: rgb(132, 134, 218);
-  display: inline-flex;
+  display: flex;
   flex: auto;
   font-family: 'Arvo', sans-serif;
   height: 100%;
