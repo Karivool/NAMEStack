@@ -3,10 +3,21 @@ function AppController($scope, $http) {
 
   let refresh = function() {
     debugger
-    $http.get('/cardinfo').success(function(response) {
+    // $http.get('/cardinfo').success(function(response) {
+    //   console.log("Data received successfully.");
+    //   $scope.cardinfo = response;
+    //   $scope.card = "";
+    // });
+    $http({
+      method: 'GET',
+      url: '/cardinfo'
+    }).then(function success(response) {
       console.log("Data received successfully.");
       $scope.cardinfo = response;
       $scope.card = "";
+    }, function error(response) {
+      debugger
+      console.log(response);
     });
   };
 
