@@ -10,10 +10,10 @@ app.use(bodyParser.json());
 app.get('/cardinfo', function (req, res) {
   console.log("GET request made.");
 
-  db.collection("namestack").find(function (err, docs) {
+  db.namestack.find(function (err, docs) {
     console.log("Collection obtained:" + docs);
 
-    res.json(docs);
+    console.log(res.json(docs));
   });
 });
 
