@@ -2,6 +2,7 @@ function AppController($scope, $http) {
   console.log("Controller initialized");
 
   let refresh = function() {
+    debugger
     $http.get('/cardinfo').success(function(response) {
       console.log("Data received successfully.");
       $scope.cardinfo = response;
