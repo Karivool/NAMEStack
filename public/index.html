@@ -31,8 +31,7 @@
             <td><button class="button-mod" ng-click="update()">Update</button>&nbsp;&nbsp;<button class="button-mod" ng-click="deselect()">Clear</td>
           </tr>
           <tr class="stats" ng-repeat="data in cardinfo">
-            <td class="stat-box">{{data}}</td>
-            <td class="stat-box">{{cardinfo}}</td>
+            <td class="stat-box">{{cardinfo.data}}</td>
             <td class="stat-box">{{data.name}}</td>
             <td class="stat-box">{{data.hp}}</td>
             <td class="stat-box">{{data.atk}}</td>
