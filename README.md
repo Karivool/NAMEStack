@@ -1,5 +1,6 @@
 # NAMEStack
 ## A simple app designed in the MEAN stack
+<img src="./namestack.png"></a>
 
 [NAMEStack live][heroku]
 
