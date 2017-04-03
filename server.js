@@ -1,10 +1,11 @@
 let express = require('express');
 let mongojs = require('mongojs');
 let app = express();
-let db = mongojs('namestack', ['namestack']);
+// let db = mongojs('namestack', ['namestack']);
 let bodyParser = require('body-parser');
 
-let mongodb = require('mongodb');
+db = require('mongodb');
+db.connect('mongodb://heroku_520l3p63:42qg8nntskvce7m425ruvrrb@ds147480.mlab.com:47480/heroku_520l3p63')
 
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.json());
