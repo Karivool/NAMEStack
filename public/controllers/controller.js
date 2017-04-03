@@ -2,12 +2,6 @@ function AppController($scope, $http) {
   console.log("Controller initialized");
 
   let refresh = function() {
-    debugger
-    // $http.get('/cardinfo').success(function(response) {
-    //   console.log("Data received successfully.");
-    //   $scope.cardinfo = response;
-    //   $scope.card = "";
-    // });
     $http({
       method: 'GET',
       url: '/cardinfo'
@@ -16,7 +10,6 @@ function AppController($scope, $http) {
       $scope.cardinfo = response;
       $scope.card = "";
     }, function error(response) {
-      debugger
       console.log(response);
     });
   };
