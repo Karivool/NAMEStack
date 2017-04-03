@@ -11,7 +11,7 @@ app.get('/cardinfo', function (req, res) {
   console.log("GET request made.");
   console.log(db.collection);
 
-  db.collection(namestack).find(function (err, docs) {
+  db.collection("cardinfo").find(function (err, docs) {
     console.log(docs);
 
     res.json(docs);
