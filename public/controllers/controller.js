@@ -4,7 +4,7 @@ function AppController($scope, $http) {
   let refresh = function() {
     $http({
       method: 'GET',
-      url: '/cardinfo'
+      url: '/cardinfo/namestack'
     }).then(function success(response) {
       console.log("Data received successfully.");
       $scope.cardinfo = response;
